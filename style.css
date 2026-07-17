@@ -19,23 +19,28 @@ section {
 
 h1 {
     margin-bottom: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 button {
     padding: 1em;
     margin: 0.2em;
-    width: 40%;
+    width: 20%;
     background-color: skyblue;
     border: 2px solid rgb(105, 192, 250);
     border-radius: 1em;
-    font-size: 1em;
+    font-size: 1.2em;
     color: white;
+    font-weight: 500;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(140, 0, 255);
 }
 
 
