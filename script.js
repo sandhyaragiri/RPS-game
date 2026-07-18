@@ -5,24 +5,33 @@ const player = document.querySelector("#player");
 const computer = document.querySelector("#computer");
 const result = document.querySelector("#result");
 
-const randomShoots = ["Rock✊🏻","Paper🤚🏻","Scissors✌🏻"];
+const randomChoices = ["Rock✊🏻","Paper🤚🏻","Scissors✌🏻"];
 
 rockBtn.addEventListener("click", ()=>{
-    player.textContent = "Rock✊🏻";
-    computer.textContent = "null";
-    result.textContent = "null";
+    player.textContent = `Player: Rock✊🏻`;
+    
+    const randomIndex = Math.floor(Math.random() * randomChoices.length);
+    const computerChoice = randomChoices[randomIndex];
+
+    computer.textContent = `Computer: ${computerChoice}`;
 });
 
 paperBtn.addEventListener("click", ()=>{
-    player.textContent = "Paper🤚🏻";
-    computer.textContent = "null";
-    result.textContent = "null";
+    player.textContent = `Player: Paper🤚🏻`;
+    
+    const randomIndex = Math.floor(Math.random() * randomChoices.length);
+    const computerChoice = randomChoices[randomIndex];
+
+    computer.textContent = `Computer: ${computerChoice}`;
 });
 
 scissorsBtn.addEventListener("click", ()=>{
-    player.textContent = "Scissors✌🏻";
-    computer.textContent = "null";
-    result.textContent = "null";
+    player.textContent = `Player: Scissors✌🏻`;
+   
+    const randomIndex = Math.floor(Math.random() * randomChoices.length);
+    const computerChoice = randomChoices[randomIndex];
+
+    computer.textContent = `Computer: ${computerChoice}`;
 });
 
 
