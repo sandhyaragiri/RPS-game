@@ -47,12 +47,20 @@ button:active {
 
 }
 
-p {
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+.text p {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 10px;
     font-size: 1.6em;
     font-weight: light;
     color: rgb(244, 243, 245);
+    line-height: 1.5em;
 }
 
 
