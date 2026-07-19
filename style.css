@@ -5,8 +5,23 @@
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: gold;
+    color: black;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 0 0 5px rgb(42, 56, 165);
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section {
@@ -14,22 +29,17 @@ section {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    margin: 1em;
+    margin: 2em;
 }
 
-h1 {
-    margin-bottom: 10px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 button {
     padding: 1em;
-    margin: 0.2em;
-    width: 100%;
-    max-width: 50%;
-    background-color: white;
+    margin: 0.5em;
+    background-color: transparent;
     border: none;
-    border-radius: 2em;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgb(42, 56, 165);
     font-size: 1.2em;
     color: black;
     font-weight: 400;
@@ -37,7 +47,7 @@ button {
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.774);
+    background-color: rgba(11, 8, 8, 0.183);
 }
 
 button:active {
@@ -59,7 +69,7 @@ button:active {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.6em;
     font-weight: light;
-    color: rgb(244, 243, 245);
+    color: black;
     line-height: 1.5em;
 }
 
