@@ -7,6 +7,7 @@
 body {
     background-color: white;
     color: black;
+    text-align: center;
 }
 
 header {
@@ -27,13 +28,15 @@ header h1 {
 section {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    margin: 2em;
+    padding: 1em;
+    width: 100%;
 }
 
 
 button {
+    width: min(150px, 100%);
     padding: 1em;
     margin: 0.5em;
     background-color: rgb(42, 56, 165);
@@ -71,6 +74,12 @@ button:active {
     color: black;
     line-height: 1.5em;
 }
+
+
+
+
+
+
 
 
 
