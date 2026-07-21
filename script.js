@@ -16,6 +16,17 @@ function showResults() {
     textSection.classList.add("show");
 }
 
+//SHOW CONFETTI
+function showConfetti() {
+    confetti({
+        particleCount: 250,
+        spread: 80,
+        origin: {
+            y: 1
+        }
+    });
+}
+
 // Main game function
 function playGame(playerChoice) {
 
@@ -38,6 +49,7 @@ function playGame(playerChoice) {
         (playerChoice === "Scissors✌🏻" && computerChoice === "Paper🤚🏻")
     ) {
         result.textContent = "Result: You Win! 🎉";
+        showConfetti();
     } 
     else {
         result.textContent = "Result: Computer Wins! 😢";
