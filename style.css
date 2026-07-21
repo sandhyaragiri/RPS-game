@@ -41,10 +41,6 @@ section {
     max-width: 900px;
     padding: 40px 20px;
     text-align: center;
-    border: 1px solid blue;
-    margin: 1em;
-    border-radius: 1em;
-    box-shadow: 0 0 5px blue;
 
 }
 
@@ -115,6 +111,47 @@ button:active {
 #result {
     background-color:rgb(253, 39, 171);
     color: white;
+}
+
+.score {
+    display: none;
+}
+
+.score p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0.5em;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(247, 243, 243);
+    font-family:'Times New Roman', Times, serif;
+}
+
+span {
+    font-family:'Times New Roman', Times, serif;
+    word-spacing: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    background-color: rgb(76, 99, 247);
+    margin: 1em;
+    border-radius: 1em;
+    padding: 2em;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+    /* box-shadow: 0 0 5px black; */
 }
 
 @media (max-width:600px){

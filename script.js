@@ -25,21 +25,17 @@ function showResults() {
     textSection.classList.add("show");
 }
 
-//SHOW CONFETTI
-function showConfetti() {
-    confetti({
-        particleCount: 250,
-        spread: 80,
-        origin: {
-            y: 0.7
-        }
-    });
+function showScores() {
+    eachScores.classList.remove("hide");
+    eachScores.classList.add("display");
 }
+
 
 // Main game function
 function playGame(playerChoice) {
 
     showResults();
+    showScores();
 
     player.textContent = `Player: ${playerChoice}`;
 
@@ -83,3 +79,14 @@ paperBtn.addEventListener("click", () => {
 scissorsBtn.addEventListener("click", () => {
     playGame("Scissors✌🏻");
 });
+
+//SHOW CONFETTI
+function showConfetti() {
+    confetti({
+        particleCount: 250,
+        spread: 80,
+        origin: {
+            y: 0.7
+        }
+    });
+}
