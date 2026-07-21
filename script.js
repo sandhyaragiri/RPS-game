@@ -83,10 +83,16 @@ scissorsBtn.addEventListener("click", () => {
 //SHOW CONFETTI
 function showConfetti() {
     confetti({
-        particleCount: 250,
+        particleCount: 550,
         spread: 80,
         origin: {
             y: 0.7
-        }
+        },
+        colors: [
+            "#00C853",
+            "#4CAF50",
+            "#81C784",
+            "#A5D6A7"
+        ]
     });
 }
