@@ -108,7 +108,7 @@ button:active {
 }
 
 #result {
-    background: linear-gradient(to left top, rgb(1, 6, 46), rgb(1, 57, 26), rgb(241, 89, 186));
+    background: linear-gradient(to right top, rgb(1, 6, 46), rgb(241, 89, 186), rgb(85, 236, 153));
     color: white;
 }
 
