@@ -37,10 +37,15 @@ header p {
 }
 
 section {
-    width: 100%;
+    width: 90%;
     max-width: 900px;
     padding: 40px 20px;
     text-align: center;
+    border: 1px solid blue;
+    margin: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 5px blue;
+
 }
 
 .buttons {

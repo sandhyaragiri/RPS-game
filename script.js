@@ -8,6 +8,15 @@ const result = document.querySelector("#result");
 
 const textSection = document.querySelector(".text");
 
+const eachScores = document.querySelector(".score");
+const playerScoreText = document.querySelector("#playerScore");
+const computerScoreText = document.querySelector("#computerScore");
+const drawMatches = document.querySelector("#drawScore");
+
+let playerScore = 0;
+let computerScore = 0;
+let drawScore = 0;
+
 const randomChoices = ["Rock✊🏻", "Paper🤚🏻", "Scissors✌🏻"];
 
 // Show the result section
@@ -22,7 +31,7 @@ function showConfetti() {
         particleCount: 250,
         spread: 80,
         origin: {
-            y: 1
+            y: 0.7
         }
     });
 }
@@ -42,6 +51,8 @@ function playGame(playerChoice) {
     // Decide winner
     if (playerChoice === computerChoice) {
         result.textContent = "Result: DRAW 🤝";
+        drawScore++;
+        drawMatches.textContent = drawScore;
     } 
     else if (
         (playerChoice === "Rock✊🏻" && computerChoice === "Scissors✌🏻") ||
@@ -50,9 +61,13 @@ function playGame(playerChoice) {
     ) {
         result.textContent = "Result: You Win! 🎉";
         showConfetti();
+        playerScore++;
+        playerScoreText.textContent = playerScore;
     } 
     else {
         result.textContent = "Result: Computer Wins! 😢";
+        computerScore++;
+        computerScoreText.textContent = computerScore;
     }
 }
 
