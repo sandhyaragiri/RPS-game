@@ -102,13 +102,13 @@ button:active {
 }
 
 #player, #computer {
-    background-color:  rgb(81, 97, 218);
-    box-shadow: none;
-    color: white;
+    background-color:  transparent;
+    box-shadow: 0 0 5px black;
+    color: black;
 }
 
 #result {
-    background: linear-gradient(to left bottom, rgb(81, 97, 218), rgb(74, 249, 153), rgb(130, 130, 248));
+    background: linear-gradient(to left top, rgb(1, 6, 46), rgb(1, 57, 26), rgb(241, 89, 186));
     color: white;
 }
 
