@@ -61,7 +61,7 @@ function playGame(playerChoice) {
         playerScoreText.textContent = playerScore;
     } 
     else {
-        result.textContent = "Computer Wins!😢";
+        result.textContent = "Computer Wins! 😢";
         computerScore++;
         computerScoreText.textContent = computerScore;
     }
