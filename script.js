@@ -37,16 +37,16 @@ function playGame(playerChoice) {
     showResults();
     showScores();
 
-    player.textContent = `Player: ${playerChoice}`;
+    player.textContent = `${playerChoice}`;
 
     const randomIndex = Math.floor(Math.random() * randomChoices.length);
     const computerChoice = randomChoices[randomIndex];
 
-    computer.textContent = `Computer: ${computerChoice}`;
+    computer.textContent = `${computerChoice}`;
 
     // Decide winner
     if (playerChoice === computerChoice) {
-        result.textContent = "Result: DRAW 🤝";
+        result.textContent = "DRAW 🤝";
         drawScore++;
         drawMatches.textContent = drawScore;
     } 
@@ -55,13 +55,13 @@ function playGame(playerChoice) {
         (playerChoice === "Paper🤚🏻" && computerChoice === "Rock✊🏻") ||
         (playerChoice === "Scissors✌🏻" && computerChoice === "Paper🤚🏻")
     ) {
-        result.textContent = "Result: You Win! 🎉";
+        result.textContent = "You Win! 🎉";
         showConfetti();
         playerScore++;
         playerScoreText.textContent = playerScore;
     } 
     else {
-        result.textContent = "Result: Computer Wins! 😢";
+        result.textContent = "Computer Wins!😢";
         computerScore++;
         computerScoreText.textContent = computerScore;
     }
