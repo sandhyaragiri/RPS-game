@@ -46,7 +46,7 @@ function playGame(playerChoice) {
 
     // Decide winner
     if (playerChoice === computerChoice) {
-        result.textContent = "DRAW 🤝";
+        result.textContent = "Draw🤝";
         drawScore++;
         drawMatches.textContent = drawScore;
     } 
@@ -55,13 +55,13 @@ function playGame(playerChoice) {
         (playerChoice === "Paper🤚🏻" && computerChoice === "Rock✊🏻") ||
         (playerChoice === "Scissors✌🏻" && computerChoice === "Paper🤚🏻")
     ) {
-        result.textContent = "You Win! 🎉";
+        result.textContent = "You Win!";
         showConfetti();
         playerScore++;
         playerScoreText.textContent = playerScore;
     } 
     else {
-        result.textContent = "Computer Wins! 😢";
+        result.textContent = "You Lose";
         computerScore++;
         computerScoreText.textContent = computerScore;
     }

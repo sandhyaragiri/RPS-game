@@ -92,6 +92,7 @@ button:active {
     margin-top: 40px;
     display: none;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -108,20 +109,20 @@ button:active {
 .text p,
 #result {
     width: 100%;
-    max-width: 300px;
+    max-width: 150px;
     padding: 15px;
     background: white;
     border-radius: 12px;
     font-size: 1.2rem;
     font-weight: 500;
-    box-shadow: 0 0 3px rgb(57, 11, 39);
+    box-shadow: 0 0 5px rgb(190, 230, 46);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #player, #computer {
     background-color:  transparent;
-    box-shadow: 0 0 5px black;
     color: black;
+    box-shadow: none;
 }
 
 #result {
