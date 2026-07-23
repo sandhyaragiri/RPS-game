@@ -52,9 +52,10 @@ section {
 
 .board p {
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 450;
     color:rgb(81, 97, 218);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -110,12 +111,12 @@ button:active {
 #result {
     width: 100%;
     max-width: 150px;
-    padding: 15px;
+    padding: 10px;
     background: white;
     border-radius: 12px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    box-shadow: 0 0 5px rgb(190, 230, 46);
+    box-shadow: 0 0 5px rgb(199, 230, 46);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -151,7 +152,7 @@ button:active {
 span {
     font-family:'Times New Roman', Times, serif;
     word-spacing: 10px;
-    padding: 0.5em;
+    padding: 0.1em;
     
 }
 
