@@ -17,7 +17,7 @@ let playerScore = 0;
 let computerScore = 0;
 let drawScore = 0;
 
-const randomChoices = ["Rock✊🏻", "Paper🤚🏻", "Scissors✌🏻"];
+const randomChoices = ["Rock", "Paper", "Scissors"];
 
 // Show the result section
 function showResults() {
@@ -46,14 +46,14 @@ function playGame(playerChoice) {
 
     // Decide winner
     if (playerChoice === computerChoice) {
-        result.textContent = "Draw🤝";
+        result.textContent = "Draw";
         drawScore++;
         drawMatches.textContent = drawScore;
     } 
     else if (
-        (playerChoice === "Rock✊🏻" && computerChoice === "Scissors✌🏻") ||
-        (playerChoice === "Paper🤚🏻" && computerChoice === "Rock✊🏻") ||
-        (playerChoice === "Scissors✌🏻" && computerChoice === "Paper🤚🏻")
+        (playerChoice === "Rock" && computerChoice === "Scissors") ||
+        (playerChoice === "Paper" && computerChoice === "Rock") ||
+        (playerChoice === "Scissors" && computerChoice === "Paper")
     ) {
         result.textContent = "You Win!";
         showConfetti();
@@ -69,15 +69,15 @@ function playGame(playerChoice) {
 
 // Button events
 rockBtn.addEventListener("click", () => {
-    playGame("Rock✊🏻");
+    playGame("Rock");
 });
 
 paperBtn.addEventListener("click", () => {
-    playGame("Paper🤚🏻");
+    playGame("Paper");
 });
 
 scissorsBtn.addEventListener("click", () => {
-    playGame("Scissors✌🏻");
+    playGame("Scissors");
 });
 
 //SHOW CONFETTI
