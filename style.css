@@ -61,6 +61,29 @@ section {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* IMAGES STYLING HERE */
+.images-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10em;
+    margin-top: 2em;
+}
+
+.rotate {
+    
+}
+
+#image1{
+    transform: rotate(30deg);
+    width: 10px;
+    
+}
+
+#image2 {
+    transform: rotateY(190deg);
+    width: 10px;
+}
 
 /* DISPLAYING RESULTS HERE */
 
@@ -68,6 +91,7 @@ section {
     display: none;
     justify-content: space-around;
     align-items: center;
+    padding-left: 1em;
 }
 
 .show {
@@ -128,12 +152,11 @@ section {
 /* BUTTON SECTION HERE */
 
 .buttons {
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 10px;
-    
+    padding-right: 10px;
 }
 
 button {
@@ -167,6 +190,7 @@ button:active {
         gap: 10px;
     }
     .buttons {
+        gap: 20px;
         align-items: center;
     }
    
