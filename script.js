@@ -13,6 +13,9 @@ const playerScoreText = document.querySelector("#playerScore");
 const computerScoreText = document.querySelector("#computerScore");
 const drawMatches = document.querySelector("#drawScore");
 
+const userHand = document.querySelector("#playerHand");
+const computerHand = document.querySelector("#computerHand");
+
 let playerScore = 0;
 let computerScore = 0;
 let drawScore = 0;

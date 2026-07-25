@@ -76,13 +76,11 @@ section {
 
 #image1{
     transform: rotate(30deg);
-    width: 10px;
     
 }
 
 #image2 {
     transform: rotateY(190deg);
-    width: 10px;
 }
 
 /* DISPLAYING RESULTS HERE */
