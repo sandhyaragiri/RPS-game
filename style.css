@@ -66,13 +66,9 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 10em;
     margin-top: 2em;
 }
 
-.rotate {
-    
-}
 
 #image1{
     transform: rotate(30deg);
@@ -89,7 +85,7 @@ section {
     display: none;
     justify-content: space-around;
     align-items: center;
-    padding-left: 1em;
+    gap: 13em;
 }
 
 .show {
@@ -182,6 +178,9 @@ button:hover {
 button:active {
     transform: scale(.95);
 }
+
+
+
 
 @media (max-width:600px){
     .score {
