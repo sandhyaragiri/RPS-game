@@ -71,12 +71,12 @@ section {
 
 
 #image1{
-    transform: rotate(30deg);
+    transform: rotateY(190deg);
     
 }
 
 #image2 {
-    transform: rotateY(190deg);
+    transform: rotateY(370deg);
 }
 
 /* DISPLAYING RESULTS HERE */
