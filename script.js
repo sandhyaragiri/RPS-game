@@ -44,7 +44,8 @@ function playGame(playerChoice) {
 
     const randomIndex = Math.floor(Math.random() * randomChoices.length);
     const computerChoice = randomChoices[randomIndex];
-
+    
+    computerHand.src = `images/${computerChoice}.png`;
     computer.textContent = `${computerChoice}`;
 
     // Decide winner
@@ -74,12 +75,14 @@ function playGame(playerChoice) {
     rockBtn.addEventListener("click", () => {
         setTimeout(()=>{
             playGame("Rock");
+            playerHand.src = "images/rock.png";
         }, 800);
 });
 
 paperBtn.addEventListener("click", () => {
     setTimeout(()=>{
         playGame("Paper");
+        playerHand.src = "images/paper.png";
     }, 800);
     
 });
@@ -87,6 +90,7 @@ paperBtn.addEventListener("click", () => {
 scissorsBtn.addEventListener("click", () => {
     setTimeout(()=>{
         playGame("Scissors");
+        playerHand.src = "images/scissors.png";
     }, 800);
 });
 
