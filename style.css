@@ -71,12 +71,12 @@ section {
 
 
 #image1{
-    transform: rotateY(190deg);
-    
+    transform: rotate(90deg) scaleX(-1);
+
 }
 
 #image2 {
-    transform: rotateY(370deg);
+    transform: rotate(-90deg);
 }
 
 /* DISPLAYING RESULTS HERE */
@@ -179,6 +179,64 @@ button:active {
     transform: scale(.95);
 }
 
+
+/* //ANIMATION PART GOES HERE */
+.shake {
+    animation: shake 0.8s ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+
+    20% {
+        transform: rotate(-15deg) translateY(-8px);
+    }
+
+    40% {
+        transform: rotate(15deg) translateY(8px);
+    }
+
+    60% {
+        transform: rotate(-15deg) translateY(-8px);
+    }
+
+    80% {
+        transform: rotate(15deg) translateY(8px);
+    }
+
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+}
+
+
+/* @keyframes shakeLeft {
+    0% { transform: rotate(0deg) translateY(0); }
+    20% { transform: rotate(-15deg) translateY(-8px); }
+    40% { transform: rotate(15deg) translateY(8px); }
+    60% { transform: rotate(-15deg) translateY(-8px); }
+    80% { transform: rotate(15deg) translateY(8px); }
+    100% { transform: rotate(0deg) translateY(0); }
+}
+
+@keyframes shakeRight {
+    0% { transform: rotate(0deg) translateY(0); }
+    20% { transform: rotate(15deg) translateY(-8px); }
+    40% { transform: rotate(-15deg) translateY(8px); }
+    60% { transform: rotate(15deg) translateY(-8px); }
+    80% { transform: rotate(-15deg) translateY(8px); }
+    100% { transform: rotate(0deg) translateY(0); }
+}
+
+.shake-left {
+    animation: shakeLeft 0.6s ease-in-out;
+}
+
+.shake-right {
+    animation: shakeRight 0.6s ease-in-out;
+} */
 
 @media (max-width:600px){
     .score {

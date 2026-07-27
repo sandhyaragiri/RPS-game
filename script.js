@@ -22,18 +22,6 @@ let drawScore = 0;
 
 const randomChoices = ["Rock", "Paper", "Scissors"];
 
-// Show the result section
-function showResults() {
-    textSection.classList.remove("hidden");
-    textSection.classList.add("show");
-}
-
-function showScores() {
-    eachScores.classList.remove("hide");
-    eachScores.classList.add("display");
-}
-
-
 // Main game function
 function playGame(playerChoice) {
 
@@ -71,27 +59,51 @@ function playGame(playerChoice) {
     }
 }
 
+// Show the result section
+function showResults() {
+    textSection.classList.remove("hidden");
+    textSection.classList.add("show");
+}
+
+function showScores() {
+    eachScores.classList.remove("hide");
+    eachScores.classList.add("display");
+}
+
+
 // Button events
     rockBtn.addEventListener("click", () => {
+
+        playerHand.classList.add("shake");
+        computerHand.classList.add("shake");
         setTimeout(()=>{
+
+        playerHand.classList.remove("shake");
+        computerHand.classList.remove("shake");
             playGame("Rock");
             playerHand.src = "images/rock.png";
-        }, 800);
+        }, 850);
 });
 
 paperBtn.addEventListener("click", () => {
+
+        playerHand.classList.add("shake");
+        computerHand.classList.add("shake");
     setTimeout(()=>{
         playGame("Paper");
         playerHand.src = "images/paper.png";
-    }, 800);
+    }, 850);
     
 });
 
 scissorsBtn.addEventListener("click", () => {
+
+        playerHand.classList.add("shake");
+        computerHand.classList.add("shake");
     setTimeout(()=>{
         playGame("Scissors");
         playerHand.src = "images/scissors.png";
-    }, 800);
+    }, 850);
 });
 
 
