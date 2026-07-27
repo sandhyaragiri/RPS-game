@@ -13,7 +13,7 @@ const playerScoreText = document.querySelector("#playerScore");
 const computerScoreText = document.querySelector("#computerScore");
 const drawMatches = document.querySelector("#drawScore");
 
-const userHand = document.querySelector("#playerHand");
+const playerHand = document.querySelector("#playerHand");
 const computerHand = document.querySelector("#computerHand");
 
 let playerScore = 0;
@@ -71,17 +71,26 @@ function playGame(playerChoice) {
 }
 
 // Button events
-rockBtn.addEventListener("click", () => {
-    playGame("Rock");
+    rockBtn.addEventListener("click", () => {
+        setTimeout(()=>{
+            playGame("Rock");
+        }, 800);
 });
 
 paperBtn.addEventListener("click", () => {
-    playGame("Paper");
+    setTimeout(()=>{
+        playGame("Paper");
+    }, 800);
+    
 });
 
 scissorsBtn.addEventListener("click", () => {
-    playGame("Scissors");
+    setTimeout(()=>{
+        playGame("Scissors");
+    }, 800);
 });
+
+
 
 //SHOW CONFETTI
 function showConfetti() {
