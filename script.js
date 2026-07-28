@@ -20,7 +20,23 @@ let playerScore = 0;
 let computerScore = 0;
 let drawScore = 0;
 
-const randomChoices = ["Rock", "Paper", "Scissors"];
+const randomChoices = [
+    {
+    name: "Rock",
+    image: "images/rock.png"
+},
+
+{
+  name: "Paper",
+  image: "images/paper.png"
+},
+
+{
+    name: "Scissors",
+    image: "images/scissors.png"
+}
+];
+
 
 // Main game function
 function playGame(playerChoice) {
@@ -33,19 +49,20 @@ function playGame(playerChoice) {
     const randomIndex = Math.floor(Math.random() * randomChoices.length);
     const computerChoice = randomChoices[randomIndex];
     
-    computerHand.src = `images/${computerChoice}.png`;
-    computer.textContent = `${computerChoice}`;
+    computer.textContent = computerChoice.name;
+    computerHand.src = computerChoice.image;
+    
 
-    // Decide winner
-    if (playerChoice === computerChoice) {
+    /*  Decide winner */
+    if (playerChoice === computerChoice.name) {
         result.textContent = "Draw";
         drawScore++;
         drawMatches.textContent = drawScore;
     } 
     else if (
-        (playerChoice === "Rock" && computerChoice === "Scissors") ||
-        (playerChoice === "Paper" && computerChoice === "Rock") ||
-        (playerChoice === "Scissors" && computerChoice === "Paper")
+        (playerChoice === "Rock" && computerChoice.name === "Scissors") ||
+        (playerChoice === "Paper" && computerChoice.name === "Rock") ||
+        (playerChoice === "Scissors" && computerChoice.name === "Paper")
     ) {
         result.textContent = "You Win!";
         showConfetti();
