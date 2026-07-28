@@ -62,8 +62,8 @@ function playGame(playerChoice) {
     else if (
         (playerChoice === "Rock" && computerChoice.name === "Scissors") ||
         (playerChoice === "Paper" && computerChoice.name === "Rock") ||
-        (playerChoice === "Scissors" && computerChoice.name === "Paper")
-    ) {
+        (playerChoice === "Scissors" && computerChoice.name === "Paper"))
+    {
         result.textContent = "You Win!";
         showConfetti();
         playerScore++;
@@ -87,26 +87,37 @@ function showScores() {
     eachScores.classList.add("display");
 }
 
+function shakeHands() {
+    playerHand.classList.remove("shake");
+    computerHand.classList.remove("shake");
+
+    void playerHand.offsetWidth;
+    void computerHand.offsetWidth;
+
+    playerHand.classList.add("shake");
+    computerHand.classList.add("shake");
+}
+
 
 // Button events
     rockBtn.addEventListener("click", () => {
+        shakeHands();
 
-        playerHand.classList.add("shake");
-        computerHand.classList.add("shake");
-        setTimeout(()=>{
-
+    setTimeout(()=>{
         playerHand.classList.remove("shake");
         computerHand.classList.remove("shake");
+
             playGame("Rock");
             playerHand.src = "images/rock.png";
         }, 850);
 });
 
 paperBtn.addEventListener("click", () => {
-
-        playerHand.classList.add("shake");
-        computerHand.classList.add("shake");
+    shakeHands();
     setTimeout(()=>{
+        playerHand.classList.remove("shake");
+        computerHand.classList.remove("shake");
+
         playGame("Paper");
         playerHand.src = "images/paper.png";
     }, 850);
@@ -114,10 +125,11 @@ paperBtn.addEventListener("click", () => {
 });
 
 scissorsBtn.addEventListener("click", () => {
-
-        playerHand.classList.add("shake");
-        computerHand.classList.add("shake");
+    shakeHands();
     setTimeout(()=>{
+        playerHand.classList.remove("shake");
+        computerHand.classList.remove("shake");
+
         playGame("Scissors");
         playerHand.src = "images/scissors.png";
     }, 850);
