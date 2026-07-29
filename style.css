@@ -76,7 +76,7 @@ section {
     grid-template-columns:1fr auto 1fr;
     align-items:center;
     justify-items:center;
-    gap:30px;
+    gap:20px;
 }
 
 .column{
@@ -87,11 +87,11 @@ section {
 }
 
 #image1{
- transform: rotate(90deg) scaleX(-1);
+ transform: rotate(70deg) scaleX(-1);
 } 
 
 #image2 {
-    transform: rotate(-90deg);
+    transform: rotate(-70deg);
 }
 /* DISPLAYING RESULTS HERE */
 
@@ -173,6 +173,7 @@ button {
     justify-content: center;
     align-items: center;
     padding: 1em;
+    border: none;
     border-radius: 10%;
     background-color: black;
     color: white;
@@ -224,7 +225,7 @@ button:active {
     }
 
     section {
-        background-color: rgb(3, 120, 99);
+        background-color: rgba(1, 29, 43, 0.386);
     }
 
     header h1 {
