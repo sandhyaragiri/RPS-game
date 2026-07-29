@@ -237,9 +237,14 @@ button:active {
         letter-spacing: none;
     }
 
-
     .score {
         gap: 10px;
+    }
+
+    .score p, .score span {
+        font-weight: light;
+        font-size: 1em;
+        font-family:'Courier New', Courier, monospace;
     }
    
 }

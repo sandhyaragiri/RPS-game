@@ -57,7 +57,7 @@ function playGame(playerChoice) {
     if (playerChoice === computerChoice.name) {
         result.textContent = "Draw";
         drawScore++;
-        drawMatches.textContent = drawScore;
+        drawMatches.textContent = `Draw/${drawScore}`;
     } 
     else if (
         (playerChoice === "Rock" && computerChoice.name === "Scissors") ||
@@ -67,12 +67,12 @@ function playGame(playerChoice) {
         result.textContent = "You Win!";
         showConfetti();
         playerScore++;
-        playerScoreText.textContent = playerScore;
+        playerScoreText.textContent = `You/${playerScore}`;
     } 
     else {
         result.textContent = "You Lose";
         computerScore++;
-        computerScoreText.textContent = computerScore;
+        computerScoreText.textContent = `Comp/${computerScore}`;
     }
 }
 
