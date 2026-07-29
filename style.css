@@ -132,7 +132,7 @@ section {
 .score p {
     width: 100%;
     max-width: 100px;
-    color: white;
+    color: black;
     padding: 0.3em;
     border-radius: 10px;
     font-family:'Times New Roman', Times, serif;
@@ -229,7 +229,7 @@ button:active {
     }
 
     section {
-        background-color: pink;
+        background-color: rgb(192, 255, 208);
     }
 
     header h1 {
