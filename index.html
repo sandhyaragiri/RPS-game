@@ -16,41 +16,46 @@
 </header>
 
 <section>
-    <div class="board">
-        <p id="you">You</p>
-        <p id="versus">V/S</p>
-        <p id="bot">Computer</p>
+   <div class="game-board">
+
+    <div class="column">
+        <p>You</p>
+        <div id="image1">
+            <img id="playerHand" src="images/rock.png" width="60px">
+        </div>
+        <p id="player"></p>
     </div>
 
-    <div class="images-box">
-        <div id="image1" class="rotate">
-          <img id="playerHand" src="/RPS-game/images/rock.png" alt="Rock Hand" width="50px">
-        </div>
-       
-        <div>
-            <p id="result"></p>
-        </div>
-        
-        <div id="image2" class="rotate">
-           <img id="computerHand" src="/RPS-game/images/rock.png" alt="Rock Hand" width="50px">
-        </div>
+    <div class="column">
+        <p>v/s</p>
+        <p id="result"></p>
     </div>
+
+    <div class="column">
+        <p>Computer</p>
+        <div id="image2">
+            <img id="computerHand" src="images/rock.png" width="60px">
+        </div>
+        <p id="computer"></p>
+    </div>
+
+</div>
 
     <div class="text">
         <p id="player"></p>
         <p id="computer"></p>
     </div><br>
 
-     <div class="score">
-        <p id="playerScore">0</p>
-        <p id="drawScore">0</p>
-        <p id="computerScore">0</p>
-    </div>
-
     <div class="buttons">
         <button class="rock">✊</button>
         <button class="paper">✋</button>
         <button class="scissors">✌️</button>
+    </div>
+
+     <div class="score">
+        <p id="playerScore">0</p>
+        <p id="drawScore">0</p>
+        <p id="computerScore">0</p>
     </div>
 
 </section>

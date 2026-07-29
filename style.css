@@ -20,8 +20,8 @@ header {
     width: 100%;
     padding: 10px;
     text-align: center;
-    background: rgb(241, 148, 205);
-    color: black;
+    background: rgb(14, 13, 13);
+    color: rgb(248, 246, 246);
 
     border-radius: 70px;
     margin: 10px;
@@ -47,7 +47,6 @@ section {
     height: 100vh;
     max-height: 100%;
     padding: 40px 20px;
-    text-align: center;
 
     background-color: rgb(241, 148, 205);
     box-shadow: 0 0 1px rgb(0, 0, 0);
@@ -60,46 +59,53 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
 }
 
 .board p {
-    padding-left: 1em;
+    overflow: hidden;
     font-size: 1.5em;
-    font-weight: 400;
+    font-weight: 500;
     color: black;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* IMAGES STYLING HERE */
-.images-box {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 2em;
+.game-board{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    justify-items:center;
+    gap:30px;
 }
 
+.column{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
 
 #image1{
-    transform: rotate(60deg) scaleX(-1);
-
-}
+ transform: rotate(90deg) scaleX(-1);
+} 
 
 #image2 {
-    transform: rotate(-60deg);
+    transform: rotate(-90deg);
 }
-
 /* DISPLAYING RESULTS HERE */
 
 .text {
     display: none;
-    justify-content: space-around;
-    align-items: center;
-    gap: 13em;
 }
 
 .show {
     display: flex;
-    margin-top: 30px;
+    justify-content: space-around;
+    align-items: center;
+
+    overflow: hidden;
+    margin: 10px;
 }
 
 .hidden {
@@ -107,8 +113,7 @@ section {
 }
 
 
-.text p,
-#result {
+.text p {
     font-size: 1.5em;
     font-weight: 500;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -119,17 +124,14 @@ section {
     color: black;
 }
 
-#result {
-    background-color: transparent;
-    color: black;
-}
 
-/* SCORE SECTION HERE */
+/* /* SCORE SECTION HERE */
 .score {
     display: none;
 }
 
 .score p {
+    text-align: center;
     width: 100%;
     max-width: 100px;
     color: black;
@@ -138,49 +140,50 @@ section {
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 1.5em;
-    box-shadow: 0 0 5px rgb(15, 12, 12);
+    margin: 10px;
     
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hide {
     display: none;
 }
+ 
 
-.display {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
 /* BUTTON SECTION HERE */
 
 .buttons {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding-right: 10px;
 }
 
 button {
     width: 100%;
     max-width: 100px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1em;
-    border: none;
-    border-radius: 50%;
+    border-radius: 10%;
     background-color: black;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     cursor: pointer;
     transition: .3s;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 button:hover {
-    background: rgba(242, 244, 243, 0.897);
+    background: rgba(242, 244, 243, 0.413);
     transform: translateY(5px);
 }
 
@@ -196,27 +199,19 @@ button:active {
 
 @keyframes shake {
     0% {
-        transform: rotate(0deg) translateY(0);
+        transform:  scaleY(1) translateY(0);
     }
-
-    20% {
-        transform: rotate(-15deg) translateY(-8px);
+    25% {
+        transform:  scaleY(1) translateX(15px);
     }
-
-    40% {
-        transform: rotate(15deg) translateY(8px);
+    50% {
+        transform:  scaleY(1) translateX(5px);
     }
-
-    60% {
-        transform: rotate(-15deg) translateY(-8px);
+    75% {
+        transform:  scaleY(1) translateX(15px);
     }
-
-    80% {
-        transform: rotate(15deg) translateY(8px);
-    }
-
     100% {
-        transform: rotate(0deg) translateY(0);
+        transform:  scaleY(1) translateX(0);
     }
 }
 
@@ -229,7 +224,7 @@ button:active {
     }
 
     section {
-        background-color: rgb(192, 255, 208);
+        background-color: rgb(3, 120, 99);
     }
 
     header h1 {
@@ -240,12 +235,10 @@ button:active {
     header p {
         letter-spacing: none;
     }
+
+
     .score {
         gap: 10px;
-    }
-    .buttons {
-        gap: 20px;
-        align-items: center;
     }
    
 }
