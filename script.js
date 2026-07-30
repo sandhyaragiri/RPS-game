@@ -18,7 +18,7 @@ const computerHand = document.querySelector("#computerHand");
 
 const roundText = document.querySelector("#roundText");
 
-const resetBtn = document.querySelector(".resetBtn");
+const button = document.querySelector("#reset");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -171,7 +171,7 @@ paperBtn.addEventListener("click", () => {
         playGame("Paper");
         playerHand.src = "images/paper.png";
 
-        setTimeout(resetHands, 1500);
+        setTimeout(resetHands, 2000);
     }, 850);
     
 });
@@ -185,9 +185,17 @@ scissorsBtn.addEventListener("click", () => {
         playGame("Scissors");
         playerHand.src = "images/scissors.png";
 
-        setTimeout(resetHands, 1500);
+        setTimeout(resetHands, 2000);
     }, 850);
 });
+
+//RESET FUNCTION GOES HERE
+function resetGame(){
+   playerScore = 0;
+   computerScore = 0;
+}
+
+button.addEventListener("click", resetGame);
 
 
 //SHOW CONFETTI

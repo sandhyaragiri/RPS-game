@@ -200,25 +200,21 @@ button:active {
     transform: scale(.95);
 }
 
-.resetBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+#reset {
     margin: 1.5em auto;
     background-color: rgb(246, 97, 147);
     padding: 10px;
-    width: 100%;
-    max-width:  200px;
     border-radius: 10px;
     color: white;
 
 }
 
-.resetBtn:active, .resetBtn:hover {
+#reset:active, #reset:hover {
     background-color: rgba(255, 255, 255, 0.441);
     color: black;
     box-shadow: 0 0 5px rgb(246, 97, 147);
+
+    cursor: pointer;
 }
 
 
