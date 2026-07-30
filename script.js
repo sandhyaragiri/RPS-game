@@ -20,6 +20,11 @@ let playerScore = 0;
 let computerScore = 0;
 let drawScore = 0;
 
+let roundsPlayed = 0;
+const totalRounds = 5;
+
+
+
 const randomChoices = [
     {
     name: "Rock",
@@ -65,7 +70,6 @@ function playGame(playerChoice) {
         (playerChoice === "Scissors" && computerChoice.name === "Paper"))
     {
         result.textContent = "You Win!";
-        showConfetti();
         playerScore++;
         playerScoreText.textContent = `You/${playerScore}`;
     } 
@@ -74,6 +78,24 @@ function playGame(playerChoice) {
         computerScore++;
         computerScoreText.textContent = `Comp/${computerScore}`;
     }
+    roundsPlayed++;
+
+    if(roundsPlayed === totalRounds){
+         if(playerScore > computerScore){
+        result.textContent = "You won the game!";
+        showConfetti();
+    }
+
+    else if(computerScore > playerScore){
+        result.textContent = "computer won the game";
+    }
+
+    else {
+        result.textContent = "🤝 It's a tie!";
+
+    }
+    }
+
 }
 
 // Show the result section
@@ -121,7 +143,7 @@ function resetHands() {
             playGame("Rock");
             playerHand.src = "images/rock.png";
 
-            setTimeout(resetHands, 1700);
+            setTimeout(resetHands, 2000);
         }, 850);
 });
 
@@ -151,8 +173,6 @@ scissorsBtn.addEventListener("click", () => {
         setTimeout(resetHands, 1500);
     }, 850);
 });
-
-
 
 
 //SHOW CONFETTI
