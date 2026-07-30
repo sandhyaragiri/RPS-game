@@ -98,6 +98,17 @@ function shakeHands() {
     computerHand.classList.add("shake");
 }
 
+//AFTER EACH ROUND SETTING GESTURES NORMAL
+
+function resetHands() {
+  playerHand.src = "images/rock.png";
+  computerHand.src = "images/rock.png";
+
+  player.textContent = "";
+    computer.textContent = "";
+    result.textContent = "Choose your move";
+}
+
 
 // Button events
     rockBtn.addEventListener("click", () => {
@@ -109,6 +120,8 @@ function shakeHands() {
 
             playGame("Rock");
             playerHand.src = "images/rock.png";
+
+            setTimeout(resetHands, 1700);
         }, 850);
 });
 
@@ -120,6 +133,8 @@ paperBtn.addEventListener("click", () => {
 
         playGame("Paper");
         playerHand.src = "images/paper.png";
+
+        setTimeout(resetHands, 1500);
     }, 850);
     
 });
@@ -132,8 +147,11 @@ scissorsBtn.addEventListener("click", () => {
 
         playGame("Scissors");
         playerHand.src = "images/scissors.png";
+
+        setTimeout(resetHands, 1500);
     }, 850);
 });
+
 
 
 

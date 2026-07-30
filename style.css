@@ -130,6 +130,12 @@ section {
     display: none;
 }
 
+.score span, .score p {
+     font-weight: light;
+     font-size: 1.2em;
+     font-family:'Courier New', Courier, monospace;
+}
+
 .score p {
     text-align: center;
     width: 100%;
@@ -137,9 +143,6 @@ section {
     color: black;
     padding: 0.3em;
     border-radius: 10px;
-    font-family:'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 1.5em;
     margin: 10px;
     
 }
