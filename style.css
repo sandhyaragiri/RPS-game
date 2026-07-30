@@ -18,17 +18,17 @@ body {
 
 header {
     width: 100%;
-    padding: 10px;
     text-align: center;
     background: rgb(14, 13, 13);
     color: rgb(248, 246, 246);
 
     border-radius: 70px;
     margin: 10px;
+    padding: 10px;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 1.5rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
@@ -86,13 +86,15 @@ section {
     gap:20px;
 }
 
-#result {
+#result, #roundText {
     text-align: center;
 }
+
 
 #image1{
  transform: rotate(70deg) scaleX(-1);
 } 
+
 
 #image2 {
     transform: rotate(-70deg);
@@ -196,6 +198,27 @@ button:hover {
 
 button:active {
     transform: scale(.95);
+}
+
+.resetBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1.5em auto;
+    background-color: rgb(246, 97, 147);
+    padding: 10px;
+    width: 100%;
+    max-width:  200px;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.resetBtn:active, .resetBtn:hover {
+    background-color: rgba(255, 255, 255, 0.441);
+    color: black;
+    box-shadow: 0 0 5px rgb(246, 97, 147);
 }
 
 

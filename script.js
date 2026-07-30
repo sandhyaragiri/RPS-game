@@ -18,6 +18,8 @@ const computerHand = document.querySelector("#computerHand");
 
 const roundText = document.querySelector("#roundText");
 
+const resetBtn = document.querySelector(".resetBtn");
+
 let playerScore = 0;
 let computerScore = 0;
 let drawScore = 0;
@@ -83,7 +85,7 @@ function playGame(playerChoice) {
 
     roundsPlayed++;
     if(roundsPlayed < totalRounds){
-         roundText.textContent = `Current Round ${roundsPlayed + 1} / ${totalRounds}`;
+         roundText.textContent = `Current Round ${roundsPlayed + 1}`;
     }
     
 
@@ -91,6 +93,8 @@ function playGame(playerChoice) {
     rockBtn.disabled = true;
     paperBtn.disabled = true;
     scissorsBtn.disabled = true;
+
+    roundText.textContent = "";
     
          if(playerScore > computerScore){
         result.textContent = "You won the game!";
