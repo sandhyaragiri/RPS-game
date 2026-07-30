@@ -40,10 +40,6 @@ A simple and responsive **Rock Paper Scissors** game built using **HTML, CSS, an
 
 This project was built for learning and practicing core front-end development concepts while improving JavaScript problem-solving skills.
 
-## 📸 Preview
-
-Add a screenshot or GIF of your game here.
-
 ## 🔮 Future Improvements
 
 * Add difficulty levels
