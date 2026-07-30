@@ -16,6 +16,8 @@ const drawMatches = document.querySelector("#drawScore");
 const playerHand = document.querySelector("#playerHand");
 const computerHand = document.querySelector("#computerHand");
 
+const roundText = document.querySelector("#roundText");
+
 let playerScore = 0;
 let computerScore = 0;
 let drawScore = 0;
@@ -69,7 +71,7 @@ function playGame(playerChoice) {
         (playerChoice === "Paper" && computerChoice.name === "Rock") ||
         (playerChoice === "Scissors" && computerChoice.name === "Paper"))
     {
-        result.textContent = "You Win!";
+        result.textContent = "You Got Point!";
         playerScore++;
         playerScoreText.textContent = `You/${playerScore}`;
     } 
@@ -78,9 +80,18 @@ function playGame(playerChoice) {
         computerScore++;
         computerScoreText.textContent = `Comp/${computerScore}`;
     }
+
     roundsPlayed++;
+    if(roundsPlayed < totalRounds){
+         roundText.textContent = `Current Round ${roundsPlayed + 1} / ${totalRounds}`;
+    }
+    
 
     if(roundsPlayed === totalRounds){
+    rockBtn.disabled = true;
+    paperBtn.disabled = true;
+    scissorsBtn.disabled = true;
+    
          if(playerScore > computerScore){
         result.textContent = "You won the game!";
         showConfetti();
@@ -126,9 +137,9 @@ function resetHands() {
   playerHand.src = "images/rock.png";
   computerHand.src = "images/rock.png";
 
-  player.textContent = "";
+    player.textContent = "";
     computer.textContent = "";
-    result.textContent = "Choose your move";
+    result.textContent = "";
 }
 
 
