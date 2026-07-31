@@ -64,7 +64,11 @@ function playGame(playerChoice) {
   roundsPlayed++; 
   
   if (roundsPlayed < totalRounds) { 
-    roundText.textContent = `Current Round ${roundsPlayed + 1}`; 
+    setTimeout(()=>{
+     roundText.textContent = `Round ${roundsPlayed + 1}`; 
+    }, 2100);
+        
+        
   } 
 
   if (roundsPlayed === totalRounds) { 
@@ -79,9 +83,11 @@ function playGame(playerChoice) {
     if (playerScore > computerScore) { 
       result.textContent = "You won the game!"; 
       showConfetti(); 
-    } else if (computerScore > playerScore) { 
+    } 
+    else if (computerScore > playerScore) { 
       result.textContent = "Computer won the game"; 
-    } else { 
+    } 
+    else { 
       result.textContent = "🤝 It's a tie!"; 
     } 
   } 
@@ -126,7 +132,7 @@ rockBtn.addEventListener("click", () => {
     playGame("Rock"); 
     playerHand.src = "images/rock.png"; 
 
-    setTimeout(resetHands, 2000); 
+    setTimeout(resetHands, 1500); 
   }, 850);
 
 }); 
@@ -140,7 +146,7 @@ paperBtn.addEventListener("click", () => {
     playGame("Paper"); 
     playerHand.src = "images/paper.png";
 
-    setTimeout(resetHands, 2000); 
+    setTimeout(resetHands, 1500); 
   }, 850); 
 
 }); 
@@ -154,7 +160,7 @@ scissorsBtn.addEventListener("click", () => {
     playGame("Scissors"); 
     playerHand.src = "images/scissors.png"; 
 
-    setTimeout(resetHands, 2000); 
+    setTimeout(resetHands, 1500); 
   }, 850);
 
 }); 
@@ -173,7 +179,7 @@ function resetGame() {
   scissorsBtn.disabled = false;
 
   // 3. Clear game summary texts
-  roundText.textContent = "Start Round 1/5";
+  roundText.textContent = "Next Round 1";
   result.textContent = "";
   player.textContent = "";
   computer.textContent = "";
