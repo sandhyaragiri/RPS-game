@@ -15,6 +15,10 @@ const roundText = document.querySelector("#roundText");
 const resetbutton = document.querySelector(".resetBtn"); // Your wrapper div
 const innerResetBtn = document.querySelector("#reset");  // The actual button element
 
+//ADDING SOUND EFFECTS TO BUTTONS
+const clickSound = new Audio("soundEffects/click.mp3");
+const winSound = new Audio("soundEffects/win.mp3");
+
 let playerScore = 0; 
 let computerScore = 0; 
 let drawScore = 0; 
@@ -83,6 +87,7 @@ function playGame(playerChoice) {
     if (playerScore > computerScore) { 
       result.textContent = "You won the game!"; 
       showConfetti(); 
+      winSound.play();
     } 
     else if (computerScore > playerScore) { 
       result.textContent = "Computer won the game"; 
@@ -125,6 +130,7 @@ function resetHands() {
 // Button events 
 rockBtn.addEventListener("click", () => { 
   shakeHands(); 
+  clickSound.play();
 
   setTimeout(() => { 
     playerHand.classList.remove("shake"); 
@@ -139,6 +145,7 @@ rockBtn.addEventListener("click", () => {
 
 paperBtn.addEventListener("click", () => { 
   shakeHands(); 
+  clickSound.play();
 
   setTimeout(() => { 
     playerHand.classList.remove("shake"); 
@@ -153,6 +160,7 @@ paperBtn.addEventListener("click", () => {
 
 scissorsBtn.addEventListener("click", () => { 
   shakeHands();
+  clickSound.play();
 
   setTimeout(() => { 
     playerHand.classList.remove("shake"); 
