@@ -13,7 +13,7 @@ const playerHand = document.querySelector("#playerHand");
 const computerHand = document.querySelector("#computerHand"); 
 const roundText = document.querySelector("#roundText"); 
 const resetbutton = document.querySelector(".resetBtn"); // Your wrapper div
-const innerResetBtn = document.getElementById("reset");  // The actual button element
+const innerResetBtn = document.querySelector("#reset");  // The actual button element
 
 let playerScore = 0; 
 let computerScore = 0; 
@@ -31,7 +31,9 @@ const randomChoices = [
 function playGame(playerChoice) { 
   showResults(); 
   showScores(); 
+
   player.textContent = `${playerChoice}`; 
+
   const randomIndex = Math.floor(Math.random() * randomChoices.length); 
   const computerChoice = randomChoices[randomIndex]; 
   computer.textContent = computerChoice.name; 
@@ -41,7 +43,8 @@ function playGame(playerChoice) {
   if (playerChoice === computerChoice.name) { 
     result.textContent = "Draw"; 
     drawScore++; 
-    drawMatches.innerHTML = `<span>Draw/</span>${drawScore}`; 
+    drawMatches.innerHTML = `<span>Draw/</span>${drawScore}`;
+
   } else if ( 
     (playerChoice === "Rock" && computerChoice.name === "Scissors") || 
     (playerChoice === "Paper" && computerChoice.name === "Rock") || 
@@ -49,7 +52,8 @@ function playGame(playerChoice) {
   ) { 
     result.textContent = "You Got Point!"; 
     playerScore++; 
-    playerScoreText.innerHTML = `<span>You/</span>${playerScore}`; 
+    playerScoreText.innerHTML = `<span>You/</span>${playerScore}`;
+
   } else { 
     result.textContent = "You Lose"; 
     computerScore++; 
@@ -115,38 +119,47 @@ function resetHands() {
 // Button events 
 rockBtn.addEventListener("click", () => { 
   shakeHands(); 
+
   setTimeout(() => { 
     playerHand.classList.remove("shake"); 
     computerHand.classList.remove("shake"); 
     playGame("Rock"); 
     playerHand.src = "images/rock.png"; 
+
     setTimeout(resetHands, 2000); 
-  }, 850); 
+  }, 850);
+
 }); 
 
 paperBtn.addEventListener("click", () => { 
   shakeHands(); 
+
   setTimeout(() => { 
     playerHand.classList.remove("shake"); 
     computerHand.classList.remove("shake"); 
     playGame("Paper"); 
-    playerHand.src = "images/paper.png"; 
+    playerHand.src = "images/paper.png";
+
     setTimeout(resetHands, 2000); 
   }, 850); 
+
 }); 
 
 scissorsBtn.addEventListener("click", () => { 
-  shakeHands(); 
+  shakeHands();
+
   setTimeout(() => { 
     playerHand.classList.remove("shake"); 
     computerHand.classList.remove("shake"); 
     playGame("Scissors"); 
     playerHand.src = "images/scissors.png"; 
+
     setTimeout(resetHands, 2000); 
-  }, 850); 
+  }, 850);
+
 }); 
 
-// 🛠️ THE WORKING RESET FUNCTION
+// THE WORKING RESET FUNCTION
 function resetGame() {
   // 1. Reset numbers
   playerScore = 0;
@@ -173,9 +186,6 @@ function resetGame() {
   // 5. Put initial hand imagery back
   playerHand.src = "images/rock.png";
   computerHand.src = "images/rock.png";
-
-  // 6. Hide the reset button cleanly
-  innerResetBtn.style.display = "none";
 }
 
 // Attach the click event properly
@@ -187,6 +197,6 @@ function showConfetti() {
     particleCount: 550, 
     spread: 80, 
     origin: { y: 0.7 }, 
-    colors: [ "#00C853", "#4CAF50", "#81C784", "#A5D6A7" ] 
+    colors: [ "#00C853", "#fc0681", "#f3ef03", "#0b1bfa" ] 
   }); 
 }
