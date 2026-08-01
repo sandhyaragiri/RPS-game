@@ -88,6 +88,8 @@ section {
      font-weight: light;
      font-size: 1.2em;
      font-family:'Courier New', Courier, monospace;
+
+     
 }
 
 .score p {
@@ -104,7 +106,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 1em auto;
+    margin: 1.5em auto;
 }
 
 .hide {
@@ -155,7 +157,6 @@ section {
     align-items: center;
 
     overflow: hidden;
-    margin: 10px;
 }
 
 .hidden {
@@ -179,7 +180,6 @@ section {
 /* BUTTON SECTION HERE */
 
 .buttons {
-    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,19 +212,24 @@ button:active {
     transform: scale(.95);
 }
 
+/* //RESET BUTTON STYLING HERE */
+
 #reset {
     width: 100%;
     max-width: 200px;
     margin: 1em auto;
-    background: linear-gradient(to left bottom, rgb(192, 192, 255), rgb(88, 88, 215));
+    background: transparent;
     padding: 10px;
-    border-radius: 10px;
-    color: white;
+    border-radius: 30px;
+    border: 1px solid #5EEAD4;
+    color: #5EEAD4;
 
 }
 
 #reset:active, #reset:hover {
     box-shadow: 0 0 5px rgb(13, 7, 9);
+    background: #5EEAD4;
+    color: #042F2E;
     cursor: pointer;
 }
 
