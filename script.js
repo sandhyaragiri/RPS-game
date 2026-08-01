@@ -71,7 +71,8 @@ function playGame(playerChoice) {
   if (roundsPlayed < totalRounds) { 
     setTimeout(()=>{
      roundText.textContent = `Round ${roundsPlayed + 1}`; 
-    }, 2100); 
+     enableButtons();
+    }, 1500); 
   } 
 
 
@@ -128,7 +129,7 @@ function resetHands() {
   result.textContent = ""; 
 } 
 
-//BUTTONS FOR PAUDING FUNCTIONS HERE
+//BUTTONS FOR PAUSING FUNCTIONS HERE
 function disableButtons(){
   rockBtn.disabled = true;
   paperBtn.disabled = true;
@@ -153,13 +154,7 @@ rockBtn.addEventListener("click", () => {
     playGame("Rock"); 
     playerHand.src = "images/rock.png"; 
 
-    setTimeout(()=>{
-      resetHands();
-
-      if(roundsPlayed < totalRounds){
-        enableButtons();
-      }
-    }, 1500);
+    setTimeout(resetHands, 1500);
 
   }, 850);
 
@@ -178,13 +173,7 @@ paperBtn.addEventListener("click", () => {
     playGame("Paper"); 
     playerHand.src = "images/paper.png";
 
-   setTimeout(()=>{
-      resetHands();
-
-      if(roundsPlayed < totalRounds){
-        enableButtons();
-      }
-    }, 1500);
+   setTimeout(resetHands, 1500);
 
   }, 850); 
 
@@ -201,13 +190,7 @@ scissorsBtn.addEventListener("click", () => {
     playGame("Scissors"); 
     playerHand.src = "images/scissors.png"; 
 
-   setTimeout(()=>{
-      resetHands();
-
-      if(roundsPlayed < totalRounds){
-        enableButtons();
-      }
-    }, 1500);
+  setTimeout(resetHands, 1500);
 
   }, 850);
 
