@@ -218,11 +218,14 @@ button:active {
     width: 100%;
     max-width: 200px;
     margin: 1em auto;
-    background: transparent;
-    padding: 10px;
+    background: rgba(255, 255, 255, 0.084) ;
+    padding: 5px;
     border-radius: 30px;
     border: 1px solid #5EEAD4;
     color: #5EEAD4;
+    
+    font-size: 1.2em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
