@@ -48,14 +48,14 @@ section {
     max-height: 100%;
     padding: 40px 20px;
 
-    background: linear-gradient(to bottom, lavender, pink);
-    box-shadow: 0 0 1px rgb(0, 0, 0);
+   background: linear-gradient(135deg, #134E4A, #042F2E);
     border-radius: 30px;
+    color: white;
 }
 
 .gameVision {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,13 +63,54 @@ section {
     margin: 0 auto;
 
 
-    background-color: lavender;
-    color: black;
-    border: 1px solid rgb(244, 7, 7);
-    padding: 3px;
-    border-radius: 10px;
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
     
 }
+
+/* /* SCORE SECTION HERE */
+.score {
+    display: none;
+    background: #115E59;
+    border: 1px solid #2DD4BF;
+    border-radius: 30px;
+    color: white;
+
+    width: 100%;
+    max-width: 400px;
+}
+
+.score span, .score p {
+     font-weight: light;
+     font-size: 1.2em;
+     font-family:'Courier New', Courier, monospace;
+}
+
+.score p {
+    text-align: center;
+    color: white;
+    padding: 0.3em;
+    border-radius: 10px;
+    margin: 5px;
+    
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1em auto;
+}
+
+.hide {
+    display: none;
+}
+ 
 
 /* IMAGES STYLING HERE */
 .game-board{
@@ -130,41 +171,9 @@ section {
 
 #player, #computer {
     background-color:  transparent;
-    color: black;
+    color: white;
 }
 
-
-/* /* SCORE SECTION HERE */
-.score {
-    display: none;
-}
-
-.score span, .score p {
-     font-weight: light;
-     font-size: 1.2em;
-     font-family:'Courier New', Courier, monospace;
-}
-
-.score p {
-    text-align: center;
-    color: black;
-    padding: 0.3em;
-    border-radius: 10px;
-    margin: 5px;
-    
-}
-
-.display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hide {
-    display: none;
-}
- 
 
 
 /* BUTTON SECTION HERE */
@@ -195,7 +204,7 @@ button {
 }
 
 button:hover {
-    background: rgb(36, 63, 50);
+    background: rgba(247, 249, 248, 0.078);
     transform: translateY(5px);
 }
 
