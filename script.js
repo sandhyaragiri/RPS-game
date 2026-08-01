@@ -75,7 +75,6 @@ function playGame(playerChoice) {
     }, 1500); 
   } 
 
-
   if (roundsPlayed === totalRounds) { 
     rockBtn.disabled = true; 
     paperBtn.disabled = true; 
@@ -86,12 +85,12 @@ function playGame(playerChoice) {
     innerResetBtn.style.display = "flex"; 
 
     if (playerScore > computerScore) { 
-      result.textContent = "You won the game!"; 
+      result.textContent = "You won the game bro!"; 
       showConfetti(); 
       winSound.play();
     } 
     else if (computerScore > playerScore) { 
-      result.textContent = "Computer won the game"; 
+      result.textContent = "Computer wins bro!"; 
     } 
     else { 
       result.textContent = "🤝 It's a tie!"; 
@@ -158,7 +157,6 @@ rockBtn.addEventListener("click", () => {
 
   }, 850);
 
-   
 }); 
 
 
