@@ -1,3 +1,4 @@
+const buttons = document.querySelector(".buttons");
 const rockBtn = document.querySelector(".rock"); 
 const paperBtn = document.querySelector(".paper"); 
 const scissorsBtn = document.querySelector(".scissors"); 
@@ -70,10 +71,9 @@ function playGame(playerChoice) {
   if (roundsPlayed < totalRounds) { 
     setTimeout(()=>{
      roundText.textContent = `Round ${roundsPlayed + 1}`; 
-    }, 2100);
-        
-        
+    }, 2100); 
   } 
+
 
   if (roundsPlayed === totalRounds) { 
     rockBtn.disabled = true; 
@@ -97,6 +97,7 @@ function playGame(playerChoice) {
     } 
   } 
 } 
+
 
 // Show the result section 
 function showResults() { 
@@ -127,10 +128,24 @@ function resetHands() {
   result.textContent = ""; 
 } 
 
+//BUTTONS FOR PAUDING FUNCTIONS HERE
+function disableButtons(){
+  rockBtn.disabled = true;
+  paperBtn.disabled = true;
+  scissorsBtn.disabled = true;
+}
+
+function enableButtons(){
+  rockBtn.disabled = false;
+  paperBtn.disabled = false;
+  scissorsBtn.disabled = false;
+}
+
 // Button events 
 rockBtn.addEventListener("click", () => { 
   shakeHands(); 
-  clickSound.play();
+  clickSound.play(); 
+  disableButtons();
 
   setTimeout(() => { 
     playerHand.classList.remove("shake"); 
@@ -138,14 +153,24 @@ rockBtn.addEventListener("click", () => {
     playGame("Rock"); 
     playerHand.src = "images/rock.png"; 
 
-    setTimeout(resetHands, 1500); 
+    setTimeout(()=>{
+      resetHands();
+
+      if(roundsPlayed < totalRounds){
+        enableButtons();
+      }
+    }, 1500);
+
   }, 850);
 
+   
 }); 
+
 
 paperBtn.addEventListener("click", () => { 
   shakeHands(); 
   clickSound.play();
+  disableButtons();
 
   setTimeout(() => { 
     playerHand.classList.remove("shake"); 
@@ -153,7 +178,14 @@ paperBtn.addEventListener("click", () => {
     playGame("Paper"); 
     playerHand.src = "images/paper.png";
 
-    setTimeout(resetHands, 1500); 
+   setTimeout(()=>{
+      resetHands();
+
+      if(roundsPlayed < totalRounds){
+        enableButtons();
+      }
+    }, 1500);
+
   }, 850); 
 
 }); 
@@ -161,6 +193,7 @@ paperBtn.addEventListener("click", () => {
 scissorsBtn.addEventListener("click", () => { 
   shakeHands();
   clickSound.play();
+  disableButtons();
 
   setTimeout(() => { 
     playerHand.classList.remove("shake"); 
@@ -168,10 +201,19 @@ scissorsBtn.addEventListener("click", () => {
     playGame("Scissors"); 
     playerHand.src = "images/scissors.png"; 
 
-    setTimeout(resetHands, 1500); 
+   setTimeout(()=>{
+      resetHands();
+
+      if(roundsPlayed < totalRounds){
+        enableButtons();
+      }
+    }, 1500);
+
   }, 850);
 
 }); 
+
+
 
 // THE WORKING RESET FUNCTION
 function resetGame() {
