@@ -210,7 +210,7 @@ function resetGame() {
   scissorsBtn.disabled = false;
 
   // 3. Clear game summary texts
-  roundText.textContent = "Next Round 1";
+  roundText.textContent = "Round 1";
   result.textContent = "";
   player.textContent = "";
   computer.textContent = "";

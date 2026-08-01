@@ -132,6 +132,7 @@ section {
     gap:20px;
 }
 
+
 #result, #roundText {
     text-align: center;
 }
@@ -278,13 +279,21 @@ button:active {
         letter-spacing: none;
     }
 
+    .column {
+        gap: 30px;
+    }
+
     .score {
         gap: 10px;
     }
 
+    .heading {
+        font-size: 0.9em;
+    }
+
     .score p, .score span {
         font-weight: light;
-        font-size: 1em;
+        font-size: 0.9em;
         font-family:'Courier New', Courier, monospace;
     }
    
