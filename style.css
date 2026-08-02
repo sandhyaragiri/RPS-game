@@ -75,7 +75,7 @@ section {
 /* /* SCORE SECTION HERE */
 .score {
     display: none;
-    background: #115E59;
+    background: #e9f1f029;
     border: 1px solid #2DD4BF;
     border-radius: 30px;
     color: white;
@@ -242,8 +242,8 @@ button:active {
 
 #reset:active, #reset:hover {
     box-shadow: 0 0 5px rgb(13, 7, 9);
-    background: #5EEAD4;
-    color: #042F2E;
+    background: #1f3532;
+    color: #f9fdfd;
     cursor: pointer;
 }
 
