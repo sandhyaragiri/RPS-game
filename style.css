@@ -91,7 +91,7 @@ section {
 
 .score span, .score p {
      font-weight: light;
-     font-size: 1.2em;
+     font-size: 1.1em;
      font-family:'Courier New', Courier, monospace;
 
      
@@ -100,7 +100,7 @@ section {
 .score p {
     text-align: center;
     color: white;
-    padding: 0.3em;
+    padding: 0.2em;
     border-radius: 10px;
     margin: 5px;
     
@@ -237,10 +237,10 @@ section {
     width: fit-content;
     padding: 8px 20px;
     margin: 1em auto;
-    background: rgba(255, 255, 255, 0.084) ;
+     background: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%);
     border-radius: 30px;
     border: 1px solid #5EEAD4;
-    color: #5EEAD4;
+    color: black;
     transition: transform 0.25s ease;
     
     font-size: 1.2em;
@@ -249,11 +249,11 @@ section {
 }
 
 #reset:active, #reset:hover {
-    box-shadow: 0 0 5px rgb(13, 7, 9);
-    background: #1f3532;
+    box-shadow: 0 0 5px rgb(222, 99, 140);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     color: #f9fdfd;
     cursor: pointer;
-
+    border: none;
     transform: translateY(0) scale(0.96);
 }
 
@@ -307,4 +307,11 @@ section {
         max-width:150px;
         font-size:1rem;
     }
+}
+
+@media (max-width: 500px){
+    section {
+       background: linear-gradient(to right, #2a5298 0%, #1e3c72 100%);
+    }
+
 }
